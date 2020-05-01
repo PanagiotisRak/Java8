@@ -1,6 +1,6 @@
-package com.company.constructorReference;
+package com.java8.constructorReference;
 
-import com.company.data.Student;
+import com.java8.data.Student;
 
 import java.util.function.Function;
 import java.util.function.Supplier;

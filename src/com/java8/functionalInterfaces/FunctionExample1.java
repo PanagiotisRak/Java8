@@ -1,4 +1,4 @@
-package com.company.functionalInterfaces;
+package com.java8.functionalInterfaces;
 
 public class FunctionExample1 {
 

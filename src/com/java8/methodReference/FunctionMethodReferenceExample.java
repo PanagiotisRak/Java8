@@ -1,4 +1,4 @@
-package com.company.methodReference;
+package com.java8.methodReference;
 
 import java.util.function.Function;
 

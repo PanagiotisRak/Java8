@@ -1,7 +1,7 @@
-package com.company.functionalInterfaces;
+package com.java8.functionalInterfaces;
 
-import com.company.data.Student;
-import com.company.data.StudentDataBase;
+import com.java8.data.Student;
+import com.java8.data.StudentDataBase;
 
 import java.util.List;
 import java.util.function.BiConsumer;
