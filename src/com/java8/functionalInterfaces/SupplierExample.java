@@ -10,7 +10,7 @@ import java.util.function.Supplier;
 public class SupplierExample {
 
     //takes no input retuns something
-    static Supplier<Student> studentSupplier = () -> new Student("Emily", 3, 4.0, "female", Arrays.asList("swimming", "gymnastics", "aerobics"));
+    static Supplier<Student> studentSupplier = () -> new Student("Emily", 3, 4.0, "female", Arrays.asList("swimming", "gymnastics", "aerobics"),12);
 
 
     public static void main(String[] args) {
