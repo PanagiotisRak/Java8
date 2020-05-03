@@ -2,19 +2,45 @@ package com.java8.data;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class Student {
     private String name;
     private int gradeLevel;
     private double gpa;
     private String gender;
-    private int noteBooks;
     List<String> activities = new ArrayList<>();
 
-    public Student() {}
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", gradeLevel=" + gradeLevel +
+                ", gpa=" + gpa +
+                ", gender='" + gender + '\'' +
+                ", activities=" + activities +
+                ", noteBooks=" + noteBooks +
+                ", bike=" + bike +
+                '}';
+    }
 
-    public Student(String name){
-        this.name = name ;
+    public Optional<Bike> getBike() {
+        return bike;
+    }
+
+    public void setBike(Optional<Bike> bike) {
+        this.bike = bike;
+    }
+
+    private int noteBooks;
+    private Optional<Bike> bike = Optional.empty();
+
+    public int getNoteBooks() {
+        return noteBooks;
+    }
+
+    public void setNoteBooks(int noteBooks) {
+        this.noteBooks = noteBooks;
     }
 
     public Student(String name, int gradeLevel, double gpa, String gender, List<String> activities, int noteBooks) {
@@ -24,6 +50,22 @@ public class Student {
         this.gender = gender;
         this.activities = activities;
         this.noteBooks = noteBooks;
+    }
+
+    public Student(String name, int gradeLevel, double gpa, String gender, List<String> activities) {
+        this.name = name;
+        this.gradeLevel = gradeLevel;
+        this.gpa = gpa;
+        this.gender = gender;
+        this.activities = activities;
+    }
+
+    public Student() {
+
+    }
+
+    public Student(String s) {
+        this.name=s;
     }
 
     public String getGender() {
@@ -58,6 +100,9 @@ public class Student {
         this.gpa = gpa;
     }
 
+    public void printListOfActivities(){
+        System.out.println(this.activities);
+    }
 
 
     public List<String> getActivities() {
@@ -68,25 +113,5 @@ public class Student {
         this.activities = activities;
     }
 
-    public void printActivities(){System.out.println(activities); }
 
-    public int getNoteBooks() {
-        return noteBooks;
-    }
-
-    public void setNoteBooks(int noteBooks) {
-        this.noteBooks = noteBooks;
-    }
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", gradeLevel=" + gradeLevel +
-                ", gpa=" + gpa +
-                ", gender='" + gender + '\'' +
-                ", noteBooks=" + noteBooks +
-                ", activities=" + activities +
-                '}';
-    }
 }
